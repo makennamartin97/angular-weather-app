@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Weather App</h2>
+  <input type="text" id="zipInput" [(ngModel)]="zip" placeholder="ZIP Code">
+  <input type="text" id="countryInput" placeholder="Country">
+  <div class="row">
+    <button (click)="getWeather()">Get Weather</button>
+  </div>
+
+  <div *ngIf="weatherData">
+    <h3>Weather in {{ weatherData.name }}</h3>
+    <p>Temperature: {{ weatherData.main.temp }} F</p>
+    <p>Weather: {{ weatherData.weather[0].description }}</p>
+  </div>
+</div>
+
+  
